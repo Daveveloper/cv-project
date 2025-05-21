@@ -6,7 +6,8 @@ import {
   FaHtml5, 
   FaCss3Alt, 
   FaGitAlt,
-  FaNode
+  FaNode,
+  FaCode
 } from 'react-icons/fa';
 import { 
   SiTypescript, 
@@ -72,7 +73,10 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" ref={sectionRef} className="section">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Skills</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 flex items-center gap-3">
+        <FaCode className="w-8 h-8 text-red-600" />
+        Skills
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skills.map((category, index) => (
           <motion.div

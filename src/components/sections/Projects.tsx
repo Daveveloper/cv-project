@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLaptopCode } from 'react-icons/fa';
 
 const ProjectCard: React.FC<{
   title: string;
@@ -34,25 +35,25 @@ const Projects: React.FC = () => {
   const projects = [
     {
       title: "Optum Healthcare Platform",
-      period: "Publicis Sapient (2024-Present)",
+      period: "Publicis Sapient (2023-Present)",
       description: "Developing features for Optum's healthcare platform, a United Health Group solution. Implementing components and functionality for healthcare management and service delivery using Next.js and AEM integration.",
       technologies: ["React", "Next.js", "GraphQL", "SASS", "AEM", "TypeScript"]
     },
     {
       title: "Soriana E-commerce Platform",
-      period: "Publicis Sapient (2023-2024)",
+      period: "Publicis Sapient (2022-2023)",
       description: "Developed key features for Soriana's e-commerce platform using Salesforce's React-based framework. Focused on implementing shopping functionalities and user interface components for Mexico's major retail chain.",
       technologies: ["React", "Salesforce Commerce", "PWA", "TypeScript"]
     },
     {
       title: "BJ's Restaurant - Digital Platform",
-      period: "Publicis Sapient (2022-2023)",
+      period: "Publicis Sapient (2021-2022)",
       description: "Developed features for BJ's Restaurant's digital platform using React and Next.js. Implemented components and functionality to enhance the dining and ordering experience.",
       technologies: ["React", "Next.js", "GraphQL", "SASS", "TypeScript"]
     },
     {
       title: "Nissan Global - Vehicle Configurator",
-      period: "Publicis Sapient (2021-2022)",
+      period: "Publicis Sapient (2021)",
       description: "Developed features for Nissan's global vehicle configuration application. Implemented components that allow customers to customize and explore vehicle options.",
       technologies: ["Vue.js", "AEM", "JavaScript", "REST APIs"]
     }
@@ -61,7 +62,10 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="bg-gray-50">
       <div className="container section">
-        <h2 className="text-3xl font-bold mb-12 text-gray-900">Projects</h2>
+        <h2 className="text-3xl font-bold mb-12 text-gray-900 flex items-center gap-3">
+          <FaLaptopCode className="w-8 h-8 text-red-600" />
+          Projects
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />

@@ -6,7 +6,10 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="bg-gray-50">
       <div className="container section">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Get In Touch</h2>
+        <h2 className="text-3xl font-bold mb-12 text-gray-900 flex items-center gap-3 justify-center">
+          <FaEnvelope className="w-8 h-8 text-red-600" />
+          Get In Touch
+        </h2>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <motion.div
