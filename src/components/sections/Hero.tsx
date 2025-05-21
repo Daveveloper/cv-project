@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
             className="max-w-2xl"
           >
             <h1 className="text-5xl font-bold mb-6 text-gray-900">
-              React Developer 👋
+              Sr. Frontend Developer 👋
             </h1>
             <p className="text-lg text-gray-700 mb-8">
               Hi, I'm Deivid Araya. A passionate Frontend Developer with 6 years of experience, based in Heredia, Costa Rica. Currently expanding my expertise in AI prompting and exploring cutting-edge technologies to stay at the forefront of web development.
