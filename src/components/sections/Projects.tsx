@@ -34,25 +34,25 @@ const Projects: React.FC = () => {
   const projects = [
     {
       title: "Optum Healthcare Platform",
-      period: "Publicis Sapient (2023-Present)",
+      period: "Publicis Sapient (2024-Present)",
       description: "Developing features for Optum's healthcare platform, a United Health Group solution. Implementing components and functionality for healthcare management and service delivery using Next.js and AEM integration.",
       technologies: ["React", "Next.js", "GraphQL", "SASS", "AEM", "TypeScript"]
     },
     {
       title: "Soriana E-commerce Platform",
-      period: "Publicis Sapient (2022-2023)",
+      period: "Publicis Sapient (2023-2024)",
       description: "Developed key features for Soriana's e-commerce platform using Salesforce's React-based framework. Focused on implementing shopping functionalities and user interface components for Mexico's major retail chain.",
       technologies: ["React", "Salesforce Commerce", "PWA", "TypeScript"]
     },
     {
       title: "BJ's Restaurant - Digital Platform",
-      period: "Publicis Sapient (2021-2022)",
+      period: "Publicis Sapient (2022-2023)",
       description: "Developed features for BJ's Restaurant's digital platform using React and Next.js. Implemented components and functionality to enhance the dining and ordering experience.",
       technologies: ["React", "Next.js", "GraphQL", "SASS", "TypeScript"]
     },
     {
       title: "Nissan Global - Vehicle Configurator",
-      period: "Publicis Sapient (2021)",
+      period: "Publicis Sapient (2021-2022)",
       description: "Developed features for Nissan's global vehicle configuration application. Implemented components that allow customers to customize and explore vehicle options.",
       technologies: ["Vue.js", "AEM", "JavaScript", "REST APIs"]
     }
