@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaFileDownload } from 'react-icons/fa'
 import Skills from './components/Skills'
+import profileImage from './assets/Deivid.jpeg'
 
 const App: React.FC = () => {
   const handleDownloadCV = () => {
@@ -17,11 +18,11 @@ const App: React.FC = () => {
         <nav className="container h-20 flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-900">Deivid Araya</h1>
           <div className="flex gap-6">
-            <a href="#about" className="text-gray-700 hover:text-accent transition-colors duration-200">About</a>
-            <a href="#skills" className="text-gray-700 hover:text-accent transition-colors duration-200">Skills</a>
-            <a href="#experience" className="text-gray-700 hover:text-accent transition-colors duration-200">Experience</a>
-            <a href="#projects" className="text-gray-700 hover:text-accent transition-colors duration-200">Projects</a>
-            <a href="#contact" className="text-gray-700 hover:text-accent transition-colors duration-200">Contact</a>
+            <a href="#about" className="text-gray-700 hover:text-red-600 transition-colors duration-200">About</a>
+            <a href="#skills" className="text-gray-700 hover:text-red-600 transition-colors duration-200">Skills</a>
+            <a href="#experience" className="text-gray-700 hover:text-red-600 transition-colors duration-200">Experience</a>
+            <a href="#projects" className="text-gray-700 hover:text-red-600 transition-colors duration-200">Projects</a>
+            <a href="#contact" className="text-gray-700 hover:text-red-600 transition-colors duration-200">Contact</a>
           </div>
         </nav>
       </header>
@@ -44,7 +45,7 @@ const App: React.FC = () => {
               </p>
               <button
                 onClick={handleDownloadCV}
-                className="flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 shadow-md"
+                className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-md"
               >
                 <FaFileDownload className="w-5 h-5" />
                 Download CV
@@ -64,7 +65,7 @@ const App: React.FC = () => {
                 className="transform hover:scale-110 transition-transform duration-200"
                 title="Visit my GitHub profile"
               >
-                <FaGithub className="w-10 h-10 text-gray-700 hover:text-accent" />
+                <FaGithub className="w-10 h-10 text-gray-700 hover:text-red-600" />
               </a>
               <a 
                 href="https://www.linkedin.com/in/davelopercr/" 
@@ -73,13 +74,13 @@ const App: React.FC = () => {
                 className="transform hover:scale-110 transition-transform duration-200"
                 title="Connect with me on LinkedIn"
               >
-                <FaLinkedin className="w-10 h-10 text-gray-700 hover:text-accent" />
+                <FaLinkedin className="w-10 h-10 text-gray-700 hover:text-red-600" />
               </a>
               <a 
                 href="mailto:dave.webdeveloper@gmail.com"
                 className="transform hover:scale-110 transition-transform duration-200"
               >
-                <FaEnvelope className="w-10 h-10 text-gray-700 hover:text-accent" />
+                <FaEnvelope className="w-10 h-10 text-gray-700 hover:text-red-600" />
               </a>
             </motion.div>
           </div>
@@ -91,19 +92,26 @@ const App: React.FC = () => {
         {/* About Section */}
         <section id="about" className="bg-gray-50">
           <div className="container section">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">About Me</h2>
+            
             <div className="flex items-center gap-12">
               <div className="flex-shrink-0">
-                <div className="w-[200px] h-[200px] rounded-full overflow-hidden border-4 border-accent shadow-lg">
+                <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-gray-900 shadow-lg">
                   <img 
-                    src="https://placehold.co/400x400/png" 
+                    src={profileImage}
                     alt="Deivid Araya" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transform scale-[1.02]"
+                    style={{ 
+                      imageRendering: 'crisp-edges',
+                      WebkitBackfaceVisibility: 'hidden',
+                      backfaceVisibility: 'hidden'
+                    }}
+                    loading="eager"
                   />
                 </div>
               </div>
 
               <div className="flex-1">
+              <h2 className="text-3xl font-bold mb-8 text-gray-900">About Me</h2>
                 <p className="text-gray-700 text-lg leading-relaxed">
                   I am a 34-year-old React Developer with 6 years of experience in building modern web applications. 
                   Based in the beautiful city of Heredia, Costa Rica, I specialize in creating responsive and 
@@ -274,8 +282,8 @@ const App: React.FC = () => {
                   className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-accent/10 p-4 rounded-full">
-                      <FaEnvelope className="w-6 h-6 text-accent" />
+                    <div className="bg-red-100 p-4 rounded-full">
+                      <FaEnvelope className="w-6 h-6 text-red-600" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900">Email</h3>
@@ -284,7 +292,7 @@ const App: React.FC = () => {
                   </div>
                   <a 
                     href="mailto:dave.webdeveloper@gmail.com"
-                    className="text-gray-700 hover:text-accent transition-colors duration-200 font-medium block"
+                    className="text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium block"
                   >
                     dave.webdeveloper@gmail.com
                   </a>
@@ -297,8 +305,8 @@ const App: React.FC = () => {
                   className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-accent/10 p-4 rounded-full">
-                      <FaPhone className="w-6 h-6 text-accent" />
+                    <div className="bg-red-100 p-4 rounded-full">
+                      <FaPhone className="w-6 h-6 text-red-600" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900">Phone</h3>
@@ -307,7 +315,7 @@ const App: React.FC = () => {
                   </div>
                   <a 
                     href="tel:+50687626435"
-                    className="text-gray-700 hover:text-accent transition-colors duration-200 font-medium block"
+                    className="text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium block"
                   >
                     <img 
                       src="https://flagcdn.com/w20/cr.png"
@@ -332,10 +340,10 @@ const App: React.FC = () => {
                   rel="noreferrer"
                   className="group flex flex-col items-center"
                 >
-                  <div className="bg-accent/10 p-4 rounded-full mb-2 group-hover:bg-accent/20 transition-colors duration-200">
-                    <FaGithub className="w-6 h-6 text-accent" />
+                  <div className="bg-red-100 p-4 rounded-full mb-2 group-hover:bg-red-200 transition-colors duration-200">
+                    <FaGithub className="w-6 h-6 text-red-600" />
                   </div>
-                  <span className="text-gray-700 group-hover:text-accent transition-colors duration-200">GitHub</span>
+                  <span className="text-gray-700 group-hover:text-red-600 transition-colors duration-200">GitHub</span>
                 </motion.a>
 
                 <motion.a
@@ -347,10 +355,10 @@ const App: React.FC = () => {
                   rel="noreferrer"
                   className="group flex flex-col items-center"
                 >
-                  <div className="bg-accent/10 p-4 rounded-full mb-2 group-hover:bg-accent/20 transition-colors duration-200">
-                    <FaLinkedin className="w-6 h-6 text-accent" />
+                  <div className="bg-red-100 p-4 rounded-full mb-2 group-hover:bg-red-200 transition-colors duration-200">
+                    <FaLinkedin className="w-6 h-6 text-red-600" />
                   </div>
-                  <span className="text-gray-700 group-hover:text-accent transition-colors duration-200">LinkedIn</span>
+                  <span className="text-gray-700 group-hover:text-red-600 transition-colors duration-200">LinkedIn</span>
                 </motion.a>
               </div>
             </div>
@@ -361,7 +369,7 @@ const App: React.FC = () => {
                 href="https://cursor.ai" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="text-accent hover:underline"
+                className="text-red-600 hover:underline"
               >
                 cursor.ai
               </a>

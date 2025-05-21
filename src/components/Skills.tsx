@@ -33,8 +33,8 @@ const skills = [
   {
     category: 'Backend & Tools',
     items: [
-      { name: 'Node.js', icon: FaNode, level: 75 },
-      { name: 'GraphQL', icon: SiGraphql, level: 80 },
+      { name: 'Node.js', icon: FaNode, level: 25 },
+      { name: 'GraphQL', icon: SiGraphql, level: 60 },
       { name: 'Git', icon: FaGitAlt, level: 90 },
     ]
   },
@@ -59,7 +59,7 @@ const SkillBar: React.FC<{ skill: typeof skills[0]['items'][0], isInView: boolea
           initial={{ width: 0 }}
           animate={{ width: isInView ? `${skill.level}%` : '0%' }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="h-full bg-accent rounded-full"
+          className="h-full bg-red-600 rounded-full"
         />
       </div>
     </div>
