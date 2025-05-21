@@ -1,15 +1,19 @@
 import React from 'react';
+import { FaBriefcase } from 'react-icons/fa';
 
 const Experience: React.FC = () => {
   return (
     <section id="experience" className="bg-gray-50">
       <div className="container section">
-        <h2 className="text-3xl font-bold mb-8 text-gray-900">Experience</h2>
+        <h2 className="text-3xl font-bold mb-8 text-gray-900 flex items-center gap-3">
+          <FaBriefcase className="w-8 h-8 text-red-600" />
+          Experience
+        </h2>
         <div className="space-y-8">
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-semibold">Senior React Developer & People Manager - Publicis Sapient</h3>
-              <span className="text-sm text-gray-500">Jan 2021 - Present</span>
+            <div className="flex flex-col mb-4">
+              <h3 className="text-xl font-semibold text-gray-900">Senior React Developer & People Manager - Publicis Sapient</h3>
+              <span className="text-sm text-red-600 mt-1 font-medium">Jan 2021 - Present</span>
             </div>
             <p className="text-gray-600 mb-4">4 years of experience at Publicis Sapient</p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
@@ -24,9 +28,9 @@ const Experience: React.FC = () => {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-semibold">React Developer - Accenture</h3>
-              <span className="text-sm text-gray-500">Nov 2018 - Dec 2020</span>
+            <div className="flex flex-col mb-4">
+              <h3 className="text-xl font-semibold text-gray-900">React Developer - Accenture</h3>
+              <span className="text-sm text-red-600 mt-1 font-medium">Nov 2018 - Dec 2020</span>
             </div>
             <p className="text-gray-600 mb-4">2 years of experience at Accenture</p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
