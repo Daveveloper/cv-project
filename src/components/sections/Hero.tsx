@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload, FaLaptopCode } from '
 
 const Hero: React.FC = () => {
   const handleDownloadCV = () => {
-    const cvUrl = '/DeividAraya_CV.pdf';
+    const cvUrl = '/CV - Deivid A - 2026.pdf';
     window.open(cvUrl, '_blank');
   };
 
@@ -40,25 +40,25 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex md:flex-col gap-6 justify-center md:justify-start"
           >
-            <a 
-              href="https://github.com/Daveveloper" 
-              target="_blank" 
+            <a
+              href="https://github.com/Daveveloper"
+              target="_blank"
               rel="noreferrer"
               className="transform hover:scale-110 transition-transform duration-200"
               title="Visit my GitHub profile"
             >
               <FaGithub className="w-8 md:w-10 h-8 md:h-10 text-gray-700 hover:text-red-600" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/davelopercr/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/davelopercr/"
+              target="_blank"
               rel="noreferrer"
               className="transform hover:scale-110 transition-transform duration-200"
               title="Connect with me on LinkedIn"
             >
               <FaLinkedin className="w-8 md:w-10 h-8 md:h-10 text-gray-700 hover:text-red-600" />
             </a>
-            <a 
+            <a
               href="mailto:dave.webdeveloper@gmail.com"
               className="transform hover:scale-110 transition-transform duration-200"
             >
