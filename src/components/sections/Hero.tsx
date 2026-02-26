@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload, FaLaptopCode } from '
 
 const Hero: React.FC = () => {
   const handleDownloadCV = () => {
-    const cvUrl = '/CV - Deivid A - 2026.pdf';
+    const cvUrl = `${import.meta.env.BASE_URL}CV - Deivid A - 2026.pdf`;
     window.open(cvUrl, '_blank');
   };
 
