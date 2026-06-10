@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
       <div className="container section">
         <h2 className="text-3xl font-bold mb-12 text-gray-900 flex items-center gap-3">
           <FaLaptopCode className="w-8 h-8 text-red-600" />
-          Projects
+          Professional Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
