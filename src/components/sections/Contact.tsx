@@ -99,18 +99,6 @@ const Contact: React.FC = () => {
             </motion.a>
           </div>
         </div>
-
-        <p className="text-sm text-gray-500 italic text-center mt-16">
-          This CV was created using{' '}
-          <a 
-            href="https://cursor.ai" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="text-red-600 hover:underline"
-          >
-            cursor.ai
-          </a>
-        </p>
       </div>
     </section>
   );
