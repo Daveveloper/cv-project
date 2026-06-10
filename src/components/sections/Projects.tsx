@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { FaLaptopCode } from 'react-icons/fa';
+import { useInView } from '../../hooks/useInView';
 
 const ProjectCard: React.FC<{
   title: string;
   period: string;
   description: string;
   technologies: string[];
-}> = ({ title, period, description, technologies }) => (
-  <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+  index: number;
+  isInView: boolean;
+}> = ({ title, period, description, technologies, index, isInView }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+  >
     <div className="mb-6">
       <h3 className="text-2xl font-bold mb-2 text-gray-900">{title}</h3>
       <p className="text-red-600 text-sm font-medium">{period}</p>
@@ -28,10 +37,13 @@ const ProjectCard: React.FC<{
         ))}
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Projects: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, 0.2);
+
   const projects = [
     {
       title: "Optum Healthcare Platform",
@@ -60,15 +72,15 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="bg-gray-50">
+    <section id="projects" ref={sectionRef} className="bg-gray-50">
       <div className="container section">
         <h2 className="text-3xl font-bold mb-12 text-gray-900 flex items-center gap-3">
           <FaLaptopCode className="w-8 h-8 text-red-600" />
           Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.title} {...project} index={index} isInView={isInView} />
           ))}
         </div>
       </div>

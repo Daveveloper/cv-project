@@ -7,13 +7,17 @@ import {
   FaCss3Alt, 
   FaGitAlt,
   FaNode,
+  FaPython,
+  FaRobot,
   FaCode
 } from 'react-icons/fa';
 import { 
   SiTypescript, 
   SiNextdotjs, 
   SiTailwindcss, 
+  SiSvelte,
   SiGraphql,
+  SiSupabase,
   SiOpenai
 } from 'react-icons/si';
 import { useInView } from '../hooks/useInView';
@@ -25,6 +29,7 @@ const skills = [
       { name: 'React', icon: FaReact, level: 95 },
       { name: 'TypeScript', icon: SiTypescript, level: 90 },
       { name: 'Next.js', icon: SiNextdotjs, level: 85 },
+      { name: 'Svelte', icon: SiSvelte, level: 60 },
       { name: 'JavaScript', icon: FaJs, level: 95 },
       { name: 'HTML5', icon: FaHtml5, level: 95 },
       { name: 'CSS3', icon: FaCss3Alt, level: 90 },
@@ -35,7 +40,9 @@ const skills = [
     category: 'Backend & Tools',
     items: [
       { name: 'Node.js', icon: FaNode, level: 25 },
+      { name: 'Python', icon: FaPython, level: 30 },
       { name: 'GraphQL', icon: SiGraphql, level: 60 },
+      { name: 'Supabase', icon: SiSupabase, level: 25 },
       { name: 'Git', icon: FaGitAlt, level: 90 },
     ]
   },
@@ -43,6 +50,8 @@ const skills = [
     category: 'AI & Emerging Tech',
     items: [
       { name: 'AI Prompting', icon: SiOpenai, level: 85 },
+      { name: 'Create AI Agents', icon: FaRobot, level: 70 },
+      { name: 'Create Skills', icon: SiOpenai, level: 75 },
     ]
   }
 ];

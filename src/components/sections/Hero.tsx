@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload, FaLaptopCode } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaLaptopCode } from 'react-icons/fa';
+import { useInView } from '../../hooks/useInView';
 
 const Hero: React.FC = () => {
-  const handleDownloadCV = () => {
-    const cvUrl = `${import.meta.env.BASE_URL}CV - Deivid A - 2026.pdf`;
-    window.open(cvUrl, '_blank');
-  };
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, 0.3);
 
   return (
-    <section className="pt-32 pb-16 bg-white">
+    <section ref={sectionRef} id="hero" className="pt-32 pb-16 bg-white">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.5 }}
             className="max-w-2xl"
           >
@@ -23,20 +22,13 @@ const Hero: React.FC = () => {
               <FaLaptopCode className="text-red-600" />
             </h1>
             <p className="text-base md:text-lg text-gray-700 mb-8">
-              Hi, I'm Deivid Araya. A passionate Frontend Developer with 6 years of experience, based in Heredia, Costa Rica. Currently expanding my expertise in AI prompting and exploring cutting-edge technologies to stay at the forefront of web development.
+              Senior Frontend Developer · People Manager · AI Explorer. Building enterprise-grade applications and leading teams at Publicis Sapient.
             </p>
-            <button
-              onClick={handleDownloadCV}
-              className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-md"
-            >
-              <FaFileDownload className="w-5 h-5" />
-              Download CV
-            </button>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex md:flex-col gap-6 justify-center md:justify-start"
           >
