@@ -46,8 +46,20 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: "Stellantis Redesign",
+      period: "Publicis Sapient (2025-Present)",
+      description: "Led the migration of UI components to React, adapted legacy jQuery functionality, migrated forms, and developed new features for Stellantis' digital platform using modern frontend architecture with AEM integration.",
+      technologies: ["React", "TypeScript", "jQuery", "Node.js", "BEM", "SASS", "AEM", "Zustand"]
+    },
+    {
+      title: "Shoppers Profile",
+      period: "Publicis Sapient (08-2025 - 12-2025)",
+      description: "Developed reusable components and features for Shoppers' user profile platform using Svelte, focusing on performance optimization and seamless user experience.",
+      technologies: ["Svelte"]
+    },
+    {
       title: "Optum Healthcare Platform",
-      period: "Publicis Sapient (2023-Present)",
+      period: "Publicis Sapient (2023-2025)",
       description: "Developing features for Optum's healthcare platform, a United Health Group solution. Implementing components and functionality for healthcare management and service delivery using Next.js and AEM integration.",
       technologies: ["React", "Next.js", "GraphQL", "SASS", "AEM", "TypeScript"]
     },
