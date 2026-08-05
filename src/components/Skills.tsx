@@ -9,7 +9,8 @@ import {
   FaNode,
   FaPython,
   FaRobot,
-  FaCode
+  FaCode,
+  FaJava
 } from 'react-icons/fa';
 import { 
   SiTypescript, 
@@ -18,7 +19,8 @@ import {
   SiSvelte,
   SiGraphql,
   SiSupabase,
-  SiOpenai
+  SiOpenai,
+  SiSpringboot
 } from 'react-icons/si';
 import { useInView } from '../hooks/useInView';
 
@@ -43,6 +45,8 @@ const skills = [
       { name: 'Python', icon: FaPython, level: 30 },
       { name: 'GraphQL', icon: SiGraphql, level: 60 },
       { name: 'Supabase', icon: SiSupabase, level: 25 },
+      { name: 'Java', icon: FaJava, level: 70 },
+      { name: 'Spring Boot', icon: SiSpringboot, level: 40 },
       { name: 'Git', icon: FaGitAlt, level: 90 },
     ]
   },
