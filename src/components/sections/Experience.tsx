@@ -23,7 +23,7 @@ const Experience: React.FC = () => {
           >
             <div className="flex flex-col mb-4">
               <h3 className="text-xl font-semibold text-gray-900">Senior Experience Engineer - Publicis Sapient</h3>
-              <span className="text-sm text-red-600 mt-1 font-medium">Jan 2021 - Present</span>
+              <span className="text-sm text-red-600 mt-1 font-medium">Jan 2021 - August 2026</span>
             </div>
             <p className="text-gray-600 mb-4">5 years of experience at Publicis Sapient</p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
