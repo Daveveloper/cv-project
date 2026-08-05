@@ -28,8 +28,8 @@ const ProjectCard: React.FC<{
       <h4 className="font-semibold text-gray-900">Technologies Used:</h4>
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech) => (
-          <span 
-            key={tech} 
+          <span
+            key={tech}
             className="px-4 py-1.5 bg-red-50 text-red-600 rounded-full text-sm font-medium hover:bg-red-100 transition-colors duration-200"
           >
             {tech}
@@ -47,13 +47,13 @@ const Projects: React.FC = () => {
   const projects = [
     {
       title: "Stellantis Redesign",
-      period: "Publicis Sapient (2025-Present)",
+      period: "Publicis Sapient (Dec-2025 - Jun-2026)",
       description: "Led the migration of UI components to React, adapted legacy jQuery functionality, migrated forms, and developed new features for Stellantis' digital platform using modern frontend architecture with AEM integration.",
       technologies: ["React", "TypeScript", "jQuery", "Node.js", "BEM", "SASS", "AEM", "Zustand"]
     },
     {
       title: "Shoppers Profile",
-      period: "Publicis Sapient (08-2025 - 12-2025)",
+      period: "Publicis Sapient (Aug-2025 - Dec-2025)",
       description: "Developed reusable components and features for Shoppers' user profile platform using Svelte, focusing on performance optimization and seamless user experience.",
       technologies: ["Svelte"]
     },
