@@ -10,7 +10,10 @@ import {
   FaPython,
   FaRobot,
   FaCode,
-  FaJava
+  FaJava,
+  FaTerminal,
+  FaRocket,
+  FaBook
 } from 'react-icons/fa';
 import { 
   SiTypescript, 
@@ -20,7 +23,9 @@ import {
   SiGraphql,
   SiSupabase,
   SiOpenai,
-  SiSpringboot
+  SiSpringboot,
+  SiClaude,
+  SiGithubcopilot
 } from 'react-icons/si';
 import { useInView } from '../hooks/useInView';
 
@@ -56,6 +61,11 @@ const skills = [
       { name: 'AI Prompting', icon: SiOpenai, level: 85 },
       { name: 'Create AI Agents', icon: FaRobot, level: 70 },
       { name: 'Create Skills', icon: SiOpenai, level: 75 },
+      { name: 'OpenCode', icon: FaTerminal, level: 80 },
+      { name: 'Claude Code', icon: SiClaude, level: 80 },
+      { name: 'Antigravity', icon: FaRocket, level: 80 },
+      { name: 'Copilot', icon: SiGithubcopilot, level: 80 },
+      { name: 'Spec Driven Development', icon: FaBook, level: 80 },
     ]
   }
 ];
