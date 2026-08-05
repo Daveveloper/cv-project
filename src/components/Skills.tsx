@@ -41,6 +41,8 @@ const skills = [
       { name: 'HTML5', icon: FaHtml5, level: 95 },
       { name: 'CSS3', icon: FaCss3Alt, level: 90 },
       { name: 'Tailwind', icon: SiTailwindcss, level: 85 },
+      { name: 'GraphQL', icon: SiGraphql, level: 60 },
+      { name: 'Git', icon: FaGitAlt, level: 90 },
     ]
   },
   {
@@ -48,11 +50,9 @@ const skills = [
     items: [
       { name: 'Node.js', icon: FaNode, level: 25 },
       { name: 'Python', icon: FaPython, level: 30 },
-      { name: 'GraphQL', icon: SiGraphql, level: 60 },
       { name: 'Supabase', icon: SiSupabase, level: 25 },
       { name: 'Java', icon: FaJava, level: 70 },
       { name: 'Spring Boot', icon: SiSpringboot, level: 40 },
-      { name: 'Git', icon: FaGitAlt, level: 90 },
     ]
   },
   {
