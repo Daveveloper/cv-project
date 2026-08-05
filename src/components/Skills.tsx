@@ -25,11 +25,31 @@ import {
   SiOpenai,
   SiSpringboot,
   SiClaude,
-  SiGithubcopilot
+  SiGithubcopilot,
+  SiTestinglibrary,
+  SiJest
 } from 'react-icons/si';
+import type { IconType } from 'react-icons';
 import { useInView } from '../hooks/useInView';
 
-const skills = [
+interface SkillItem {
+  name: string;
+  icon: IconType;
+  level: number;
+}
+
+interface SkillSection {
+  title: string;
+  items: SkillItem[];
+}
+
+interface SkillCategory {
+  category: string;
+  items?: SkillItem[];
+  subsections?: SkillSection[];
+}
+
+const skills: SkillCategory[] = [
   {
     category: 'Frontend',
     items: [
@@ -43,6 +63,15 @@ const skills = [
       { name: 'Tailwind', icon: SiTailwindcss, level: 85 },
       { name: 'GraphQL', icon: SiGraphql, level: 60 },
       { name: 'Git', icon: FaGitAlt, level: 90 },
+    ],
+    subsections: [
+      {
+        title: 'Unit Testing',
+        items: [
+          { name: 'React Testing Library', icon: SiTestinglibrary, level: 80 },
+          { name: 'Jest', icon: SiJest, level: 80 },
+        ]
+      }
     ]
   },
   {
@@ -54,8 +83,7 @@ const skills = [
       { name: 'Java', icon: FaJava, level: 70 },
       { name: 'Spring Boot', icon: SiSpringboot, level: 40 },
     ]
-  },
-  {
+  },  {
     category: 'AI & Emerging Tech',
     items: [
       { name: 'AI Prompting', icon: SiOpenai, level: 85 },
@@ -70,7 +98,7 @@ const skills = [
   }
 ];
 
-const SkillBar: React.FC<{ skill: typeof skills[0]['items'][0], isInView: boolean }> = ({ skill, isInView }) => {
+const SkillBar: React.FC<{ skill: SkillItem, isInView: boolean }> = ({ skill, isInView }) => {
   return (
     <div className="space-y-2">
       <div className="flex items-center gap-2 text-gray-700">
@@ -113,10 +141,22 @@ const Skills: React.FC = () => {
               {category.category}
             </h3>
             <div className="space-y-4">
-              {category.items.map((skill) => (
+              {category.items?.map((skill) => (
                 <SkillBar key={skill.name} skill={skill} isInView={isInView} />
               ))}
             </div>
+            {category.subsections?.map((subsection) => (
+              <div key={subsection.title} className="mt-6">
+                <h4 className="text-lg font-semibold mb-3 text-gray-900">
+                  {subsection.title}
+                </h4>
+                <div className="space-y-4">
+                  {subsection.items.map((skill) => (
+                    <SkillBar key={skill.name} skill={skill} isInView={isInView} />
+                  ))}
+                </div>
+              </div>
+            ))}
           </motion.div>
         ))}
       </div>
