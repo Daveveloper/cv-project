@@ -104,7 +104,6 @@ const SkillBar: React.FC<{ skill: SkillItem, isInView: boolean }> = ({ skill, is
       <div className="flex items-center gap-2 text-gray-700">
         <skill.icon className="w-5 h-5" />
         <span>{skill.name}</span>
-        <span className="ml-auto">{skill.level}%</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
         <motion.div
