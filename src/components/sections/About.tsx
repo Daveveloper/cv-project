@@ -20,11 +20,11 @@ const About: React.FC = () => {
           >
             <div className="w-[200px] md:w-[300px] h-[200px] md:h-[300px] rounded-full overflow-hidden border-4 border-gray-900 shadow-lg relative group">
               <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-0 z-10"></div>
-              <img 
+              <img
                 src={profileImage}
-                alt="Deivid Araya" 
+                alt="Deivid Araya"
                 className="w-full h-full object-cover transform scale-[1.02]"
-                style={{ 
+                style={{
                   WebkitBackfaceVisibility: 'hidden',
                   backfaceVisibility: 'hidden'
                 }}
@@ -44,7 +44,7 @@ const About: React.FC = () => {
               About Me
             </h2>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              I'm a Senior Frontend Developer and People Manager with over 7 years of experience building modern web applications. Based in Heredia, Costa Rica, I specialize in React, TypeScript, and Next.js — leading enterprise-level projects and mentoring development teams at Publicis Sapient. Currently expanding into AI and emerging technologies, exploring agent creation, prompt engineering, and new tools to stay at the cutting edge of development.
+              I'm a Senior Frontend/Full Stack Developer and People Manager with over 7 years of experience building modern web applications. Based in Heredia, Costa Rica, I specialize in React, TypeScript, and Next.js — leading enterprise-level projects and mentoring development teams. Currently expanding into AI and emerging technologies, exploring agent creation, prompt engineering, and new tools to stay at the cutting edge of development.
             </p>
           </motion.div>
         </div>
