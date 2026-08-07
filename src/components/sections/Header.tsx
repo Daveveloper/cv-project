@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaUser, FaCode, FaBriefcase, FaLaptopCode, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaCode, FaBriefcase, FaLaptopCode, FaEnvelope, FaGamepad } from 'react-icons/fa';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +15,7 @@ const Header: React.FC = () => {
     { href: '#experience', text: 'Experience', icon: <FaBriefcase className="w-5 h-5" /> },
     { href: '#projects', text: 'Projects', icon: <FaLaptopCode className="w-5 h-5" /> },
     { href: '#contact', text: 'Contact', icon: <FaEnvelope className="w-5 h-5" /> },
+    { href: '#game', text: 'Game', icon: <FaGamepad className="w-5 h-5" /> },
   ];
 
   return (

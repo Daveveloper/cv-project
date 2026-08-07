@@ -7,6 +7,7 @@ import Experience from './components/sections/Experience'
 import Projects from './components/sections/Projects'
 import PersonalProjects from './components/sections/PersonalProjects'
 import Contact from './components/sections/Contact'
+import ColorGame from './components/sections/ColorGame'
 import Footer from './components/sections/Footer'
 
 const App: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Projects />
         <PersonalProjects />
         <Contact />
+        <ColorGame />
       </main>
       <Footer />
     </div>
