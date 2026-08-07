@@ -18,11 +18,11 @@ const Hero: React.FC = () => {
             className="max-w-2xl"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 flex items-center gap-3">
-              Frontend Developer
+              Full Stack Developer
               <FaLaptopCode className="text-red-600" />
             </h1>
             <p className="text-base md:text-lg text-gray-700 mb-8">
-              Senior Frontend Developer · People Manager · AI Explorer. Building enterprise-grade applications and leading teams at Publicis Sapient.
+              Full Stack Developer | People Manager | AI Explorer | Building enterprise-grade applications and leading teams.
             </p>
           </motion.div>
 
